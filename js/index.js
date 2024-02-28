@@ -18,6 +18,17 @@ function InputSubmit() {
         document.getElementById("result").innerHTML = "Your age is: " + age;
     }
 }
+function toggleMenu() {
+  var menu = document.querySelector('.Navbar ul');
+  var menuIcon = document.querySelector('.Navbar #menuIcon');
+  var closeIcon = document.querySelector('.Navbar #closeIcon');
+  
+  menu.classList.toggle('active');
+  menuIcon.style.display = menu.classList.contains('active') ? 'none' : 'block';
+  closeIcon.style.display = menu.classList.contains('active') ? 'block' : 'none';
+}
+
+
 function getProfileInfo() {
     const profileImg = document.getElementById("userImgprofile");
     profileImg.src = localStorage.getItem("img");

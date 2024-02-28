@@ -3,53 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup</title>
+    <title>Signup</title>
+    <style>
+        /* Added CSS for styling and responsiveness */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            max-width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #534caf;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #7e1dce;
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 400px) {
+            /* Adjusting layout for small screens */
+            div {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div>
         <form name='form-login' >
-    
+
             <h1>REGISTER</h1>
             <p id="signin_msg" ></p>
 
-            <label for="name"></label>
+            <label for="name">Username</label>
             <input type="text" id="name" placeholder="Username" required>
-            <label for="name"></label>
+            <label for="surname">Surname</label>
             <input type="text" id="surname" placeholder="Surname" required>
-            <label for="email"></label>
+            <label for="email">Email</label>
             <input type="email" id="email" placeholder="Email" required>
-            <label>Select Image</label>
-            <input type="file" id="img" required accept="/*image">
-            <label for="pwd"></label>
-            <input type="password"
-                   id= "pwd"
-                   autocomplete="on"
-                   placeholder="Password" required>
-                   <ul class="helper-text">
-                    <li class="length">Must be at least 6 characters long.</li>
-                    <li class="lowercase">Must contain a lowercase letter.</li>
-                    <li class="uppercase">Must contain an uppercase letter.</li>
-                </ul>
+            <label for="img">Select Image</label>
+            <input type="file" id="img" required accept="image/*">
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" autocomplete="on" placeholder="Password" required>
+            <ul class="helper-text">
+                <li class="lowercase">Must contain a lowercase letter.</li>
+                <li class="uppercase">Must contain an uppercase letter.</li>
+            </ul>
             <input id="rgstr_btn" type="submit" value="Register" onclick="signup(event)">
             <a href="../html/signin.html" style="color: #000000;" >Sign in here</a>
-    
+
         </form>
     </div>
     <script src="../js/validation.js" ></script>
     <script>
-      
-
         const img = document.getElementById('img');
-    img.addEventListener("change", function(){
-    var readimgfile= new FileReader();
-        readimgfile.onload= function(){
-            localStorage.setItem('img', readimgfile.result);
-            
-        }
-    readimgfile.readAsDataURL(this.files[0]);
-});
-    
+        img.addEventListener("change", function(){
+            var readimgfile= new FileReader();
+            readimgfile.onload= function(){
+                localStorage.setItem('img', readimgfile.result);
+            }
+            readimgfile.readAsDataURL(this.files[0]);
+        });
     </script>
-    </div>
 </body>
 </html>
