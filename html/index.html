@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body onload="changeTheImage()" onload="loginState()">
+    <div class="Navbar">
+      <img id="userImg" alt="profile picture" >
+      <ul>
+        <li><span>Home</span></li>
+        <li><span><a href="./profile.html">profile</a></span></li> 
+        <li class="sidebarContent"><span> <i onclick="logout()" class="fas fa-sign-out-alt">Logout</i> </span></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="Left">
+        <h1>Left</h1>
+        <div class="inputContainer">
+            <form action="#">
+          <div>
+            <input type="date" id="dateInput"  required/>
+          </div>
+          <div>
+            <button onclick=InputSubmit() >Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="Right">
+        <h1>Right</h1>
+        <div >
+            <h1 id="result"></h1>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/index.js">
+  </script>
+  <script src="../js/validation.js"></script>
+</html>

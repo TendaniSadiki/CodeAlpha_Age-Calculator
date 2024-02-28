@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signin</title>
+    ,
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <div>
+      <form name="form-login" method="read" action="#">
+        <h1>SIGN IN</h1>
+        <p id="signin_msg"></p>
+        <label for="userName">Email</label>
+        <input type="email" id="email" placeholder="Email" required />
+        <label for="userPw">Password</label>
+        <input
+          type="password"
+          id="pwd"
+          autocomplete="on"
+          placeholder="Password"
+          required
+        />
+        <input
+          id="login_btn"
+          type="submit"
+          value="Login"
+          onclick="signin(event)"
+        />
+        <a style="color: #000000" href="..//html/signup.html">Create account</a>
+      </form>
+    </div>
+  </body>
+  <script src="../js/validation.js"></script>
+</html>

@@ -1,0 +1,139 @@
+/* *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    background-color: brown;
+    width: 100%;
+    height: 100vh;
+}
+.container .Left{
+    background-color: blue;
+    width: 50%;
+    float: left;
+    height: 100vh;
+    text-align: center;
+}
+.inputContainer{
+    background-color: blueviolet;
+    margin: 30px;
+    height: 70%;
+}
+.inputContainer input{
+    padding: 10px;
+    cursor: pointer;
+}
+.inputContainer button{
+    margin-top: 400px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}.inputContainer button:hover{
+    border: 1px groove black;
+}
+.container .Right{
+    background-color: red;
+    width: 50%;
+    float: right;
+    height: 50vh;
+    text-align: center;
+} */
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin-top: 100px; /* Adjusted margin-top from .container */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Left,
+.Right {
+  flex: 1 1 100%; /* Adjusted flex to take full width on small screens */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Added margin-bottom for spacing */
+}
+
+.Right {
+  background-color: #534caf;
+  color: #fff;
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+}
+
+input[type="date"],
+button {
+  padding: 10px;
+  margin-top: 5px;
+  width: 100%;
+  background-color: #534caf;
+  color: #fff;
+  border: none; /* Removed border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7e1dce;
+}
+
+#result {
+  font-size: 18px;
+}
+
+#userImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+}
+
+.Navbar {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: #1d96ce;
+  display: flex;
+  align-items: center; /* Center align items vertically */
+  padding: 0 20px; /* Added padding for spacing */
+}
+
+.Navbar ul {
+  list-style: none;
+  margin-left: auto; /* Push the list to the right */
+}
+
+.Navbar ul li {
+  display: inline;
+  padding: 10px;
+  margin: 0 10px; /* Adjusted margin */
+}
+
+.Navbar ul li span {
+  padding-top: 50px;
+}
